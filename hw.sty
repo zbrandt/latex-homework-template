@@ -1,18 +1,13 @@
-\NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{hw}[2026/01/30 Homework Template Style]
+\ProvidesPackage{hw}
 
-%
-% Required Packages
-%
-
-\RequirePackage{fancyhdr}
-\RequirePackage{extramarks}
-\RequirePackage{amsmath}
-\RequirePackage{amsthm}
-\RequirePackage{amsfonts}
-\RequirePackage{tikz}
-\RequirePackage[plain]{algorithm}
-\RequirePackage{algpseudocode}
+\usepackage{fancyhdr}
+\usepackage{extramarks}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{tikz}
+\usepackage[plain]{algorithm}
+\usepackage{algpseudocode}
 
 \usetikzlibrary{automata,positioning}
 
@@ -29,12 +24,6 @@
 
 \linespread{1.1}
 
-\setlength\parindent{0pt}
-
-%
-% Header and Footer Configuration
-%
-
 \pagestyle{fancy}
 \lhead{\hmwkAuthorName}
 \chead{\hmwkClass\ (\hmwkClassInstructor\ \hmwkClassTime): \hmwkTitle}
@@ -45,23 +34,14 @@
 \renewcommand\headrulewidth{0.4pt}
 \renewcommand\footrulewidth{0.4pt}
 
-%
-% Homework Details Commands
-%
-
-\newcommand{\hmwkTitle}{}
-\newcommand{\hmwkDueDate}{}
-\newcommand{\hmwkClass}{}
-\newcommand{\hmwkClassTime}{}
-\newcommand{\hmwkClassInstructor}{}
-\newcommand{\hmwkAuthorName}{}
+\setlength\parindent{0pt}
 
 %
 % Create Problem Sections
 %
 
 \newcommand{\enterProblemHeader}[1]{
-    \nobreak\extramarks{}{Problem \arabic{#1} continued on next page\ldots}\nobreak{}
+    \nobreak\extramarks{Problem \arabic{#1}}{Problem \arabic{#1} continued on next page\ldots}\nobreak{}
     \nobreak\extramarks{Problem \arabic{#1} (continued)}{Problem \arabic{#1} continued on next page\ldots}\nobreak{}
 }
 
@@ -97,8 +77,22 @@
 }
 
 %
-% Part Command
+% Homework Details
+%   - Title
+%   - Due date
+%   - Class
+%   - Section/Time
+%   - Instructor
+%   - Author
 %
+
+\newcommand{\hmwkTitle}{Homework\ \#2}
+\newcommand{\hmwkDueDate}{February 12, 2014}
+\newcommand{\hmwkClass}{Calculus}
+\newcommand{\hmwkClassTime}{Section A}
+\newcommand{\hmwkClassInstructor}{Professor Isaac Newton}
+\newcommand{\hmwkAuthorName}{\textbf{Josh Davis} \and \textbf{Davis Josh}}
+
 
 \renewcommand{\part}[1]{\textbf{\large Part \Alph{partCounter}}\stepcounter{partCounter}\\}
 
@@ -126,5 +120,3 @@
 \newcommand{\Var}{\mathrm{Var}}
 \newcommand{\Cov}{\mathrm{Cov}}
 \newcommand{\Bias}{\mathrm{Bias}}
-
-\endinput
